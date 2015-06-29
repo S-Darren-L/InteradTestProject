@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Framelayout to display Fragments -->
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+       <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/tvMyAccount"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/setting_my_account"
+            android:background="@color/tab_content"
+            android:layout_marginTop="10dp"
+            android:textAppearance="?android:attr/textAppearanceLarge" 
+            android:onClick="onMyAccountClick"/>
+        
+        <Button
+            android:id="@+id/tvNotifications"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tvMyAccount"
+            android:layout_alignEnd="@+id/tvMyAccount"
+            android:layout_below="@+id/tvMyAccount"
+            android:layout_marginTop="10dp"
+            android:text="@string/setting_notifications"
+            android:background="@color/tab_content"
+            android:textAppearance="?android:attr/textAppearanceLarge" 
+            android:onClick="onNotificationsClick" />
+        
+        <Button
+            android:id="@+id/tvPrivacy"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tvMyAccount"
+            android:layout_alignEnd="@+id/tvMyAccount"
+            android:layout_below="@+id/tvNotifications"
+            android:layout_marginTop="10dp"
+            android:text="@string/setting_privacy"
+            android:background="@color/tab_content"
+            android:textAppearance="?android:attr/textAppearanceLarge" 
+            android:onClick="onPrivacyClick" />
+        
+        <Button
+            android:id="@+id/tvGeneral"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tvMyAccount"
+            android:layout_alignEnd="@+id/tvMyAccount"
+            android:layout_below="@+id/tvPrivacy"
+            android:layout_marginTop="10dp"
+            android:text="@string/setting_General"
+            android:background="@color/tab_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"  
+            android:onClick="onGeneralClick"/>
+
+        
+        <Button
+            android:id="@+id/tvAbout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tvMyAccount"
+            android:layout_alignEnd="@+id/tvMyAccount"
+            android:layout_below="@+id/tvGeneral"
+            android:layout_marginTop="10dp"
+            android:text="@string/setting_about"
+            android:background="@color/tab_content"
+            android:textAppearance="?android:attr/textAppearanceLarge" 
+            android:onClick="onAboutClick" />        
+        
+        </RelativeLayout>
+        
+    </FrameLayout>
+
+    <!-- Listview to display slider menu -->
+    <ListView
+        android:id="@+id/list_slidermenu"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:choiceMode="singleChoice"
+        android:divider="@color/list_divider"
+        android:dividerHeight="1dp"        
+        android:listSelector="@drawable/list_selector"
+        android:background="@color/list_background"/>
+</android.support.v4.widget.DrawerLayout>
